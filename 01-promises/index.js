@@ -1,10 +1,19 @@
 
-// the call stack
+const makeDogPromise = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const rand = Math.random()
 
-const multiply = (x, y) => x * y
-
-const square = (x) => multiply(x, x)
-
-const isRightTriangle = (a, b, c) => square(b) + square(b) === square(c)
-
-isRightTriangle(3, 4, 5)
+            if (rand < 0.5) {
+                console.log('Got a dog!')
+                resolve()
+            }
+            reject()
+        }, 5000)
+    })
+}
+makeDogPromise().then(() => {
+    console.log('BARK!')
+}).catch(() => {
+    console.log('no dog :(')
+})

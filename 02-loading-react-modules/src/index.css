@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #cfcfcf;
+  background-color: #456789;
 }
 
 code {
@@ -14,11 +14,13 @@ code {
 }
 
 .outer-container {
-    width: 63%;
+    width: 100%;
     margin: 90px auto 0 auto;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .display-img {
-    width: 360px;
+    width: 480px;
+    margin: 18px;
 }
